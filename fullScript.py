@@ -2,7 +2,7 @@
 import MySQLdb
 import numpy as np
 
-db = MySQLdb.connect("97.74.31.7","dmtwitter","Jackson13!","dmtwitter" );
+db = MySQLdb.connect(host="localhost",user="foo",passwd="bar",db="stuffs");
 cursor = db.cursor();
 cursor.execute("SELECT COUNT(*) FROM tweets;");
 tweetCount = int(cursor.fetchone()[0]);
